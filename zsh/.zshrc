@@ -12,9 +12,25 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+###############################################################################
+#                            ENVIRONMENT VARIABLES                            #
+###############################################################################
+
 export PATH="$PATH:/opt/homebrew/bin"
+export PATH="$PATH:/opt/homebrew/sbin"
+
+###############################################################################
+#                            EVALUATION FUNCTIONS                             #
+###############################################################################
 
 eval "$(starship init zsh)"
+eval "$(atuin init zsh)"
+eval "$(zoxide init zsh)"
+source <(fzf --zsh)
+
+###############################################################################
+#                            ALIASES AND FUNCTIONS                            #
+###############################################################################
 
 alias rebuild="darwin-rebuild switch --flake ~/.config/nix-darwin"
 alias pip="python3 -m pip"

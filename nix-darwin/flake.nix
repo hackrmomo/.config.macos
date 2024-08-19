@@ -18,23 +18,36 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
         [
+          # terminals, terminal apps, and utilities
           pkgs.vim
+          pkgs.kitty
+          pkgs.starship
+          pkgs.alacritty
+          pkgs.lazygit
+          pkgs.atuin
+          pkgs.screenfetch
+          pkgs.neofetch
+          pkgs.zoxide
+          pkgs.fzf
+
+          # apps
           pkgs.vscode
           pkgs.raycast
           pkgs.spotify
           pkgs.mos
-          pkgs.alacritty
           pkgs.discord
           pkgs.slack
           pkgs.teams
-          pkgs.kitty
-          pkgs.starship
-          pkgs.dotnet-sdk_8
+          pkgs.obsidian
           pkgs.stats
+
+          # dev dependencies
+          pkgs.dotnet-sdk_8
           pkgs.poetry
           pkgs.python313Full
-          pkgs.lazygit
-          pkgs.obsidian
+
+          # nix stuff
+          pkgs.nil
         ];
       nixpkgs.config = { allowBroken = true; allowUnfree = true; };
 
@@ -86,6 +99,11 @@
           "azure-cli" # we install az via brew since az ssh is broken on pkgs.azure-cli
         ];
 
+        masApps = {
+          "Hand Mirror" = 1502839586;
+          "Amphetamine" = 937984704;
+        };
+
         casks = [
           "proton-pass"
           "proton-mail"
@@ -97,11 +115,16 @@
           "docker"
           "microsoft-outlook"
           "sip"
+          "bluebubbles"
         ];
       };
 
       system.defaults = {
-        ".GlobalPreferences"."com.apple.mouse.scaling" = -1.0;
+        ".GlobalPreferences" = {
+          "com.apple.mouse.scaling" = 0.5;
+          # "com.apple.mouse.linear" = true; # does not work yet
+        };
+
         finder = {
           AppleShowAllExtensions = true;
           ShowPathbar = true;
