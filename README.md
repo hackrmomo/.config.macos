@@ -10,3 +10,4 @@
   - Change the `nixpkgs.hostPlatform` to your system's platform
   - Change the wallpapers for each monitor
   - Setup various apps manually (i.e. 1password for the ssh agent, discord, spotify, etc.)
+  - install [brew](https://brew.sh/) (like why is this a thing?)
