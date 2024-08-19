@@ -12,6 +12,8 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+export PATH="$PATH:/opt/homebrew/bin"
+
 eval "$(starship init zsh)"
 
 alias rebuild="darwin-rebuild switch --flake ~/.config/nix-darwin"

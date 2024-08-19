@@ -30,7 +30,6 @@
           pkgs.kitty
           pkgs.starship
           pkgs.dotnet-sdk_8
-          pkgs.azure-cli
           pkgs.stats
           pkgs.poetry
           pkgs.python313Full
@@ -83,7 +82,7 @@
       homebrew = {
         enable = true;
         brews = [
-          
+          "azure-cli" # we install az via brew since az ssh is broken on pkgs.azure-cli
         ];
 
         casks = [
