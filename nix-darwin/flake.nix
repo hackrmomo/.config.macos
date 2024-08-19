@@ -34,6 +34,7 @@
           pkgs.poetry
           pkgs.python313Full
           pkgs.lazygit
+          pkgs.obsidian
         ];
       nixpkgs.config = { allowBroken = true; allowUnfree = true; };
 
