@@ -34,3 +34,10 @@ source <(fzf --zsh)
 
 alias rebuild="darwin-rebuild switch --flake ~/.config/nix-darwin"
 alias pip="python3 -m pip"
+alias g="git"
+alias gc="git commit -m"
+alias gp="git push"
+alias gl="git pull"
+alias gco="git checkout"
+alias cl="clear"
+alias l="ls -lah"
