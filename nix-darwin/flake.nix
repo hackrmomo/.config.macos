@@ -98,7 +98,6 @@
         enable = true;
         brews = [
           "azure-cli" # we install az via brew since az ssh is broken on pkgs.azure-cli
-          "nvm"
         ];
 
         masApps = {
