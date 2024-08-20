@@ -13,23 +13,25 @@ compinit
 # End of lines added by compinstall
 
 ###############################################################################
-#                            ENVIRONMENT VARIABLES                            #
+# ENVIRONMENT VARIABLES                                                       #
 ###############################################################################
 
 export PATH="$PATH:/opt/homebrew/bin"
 export PATH="$PATH:/opt/homebrew/sbin"
+export NVM_DIR="$HOME/.nvm"
 
 ###############################################################################
-#                            EVALUATION FUNCTIONS                             #
+# EVALUATION FUNCTIONS AND LOADERS                                            #
 ###############################################################################
 
 eval "$(starship init zsh)"
 eval "$(atuin init zsh)"
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 ###############################################################################
-#                            ALIASES AND FUNCTIONS                            #
+# ALIASES AND FUNCTIONS                                                       #
 ###############################################################################
 
 alias rebuild="darwin-rebuild switch --flake ~/.config/nix-darwin"
