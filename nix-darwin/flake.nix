@@ -21,6 +21,7 @@
           # terminals, terminal apps, and utilities
           pkgs.vim
           pkgs.kitty
+          pkgs.kitty-themes
           pkgs.starship
           pkgs.alacritty
           pkgs.lazygit
