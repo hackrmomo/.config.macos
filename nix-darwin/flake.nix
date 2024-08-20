@@ -117,6 +117,9 @@
           "microsoft-outlook"
           "sip"
           "bluebubbles"
+          "tableplus"
+          "twingate"
+          "kicad"
         ];
       };
 
