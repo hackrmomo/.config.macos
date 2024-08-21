@@ -30,6 +30,7 @@
           pkgs.neofetch
           pkgs.zoxide
           pkgs.fzf
+          pkgs.neovim
 
           # apps
           pkgs.vscode
@@ -46,6 +47,7 @@
           pkgs.dotnet-sdk_8
           pkgs.poetry
           pkgs.python313Full
+          pkgs.go
 
           # nix stuff
           pkgs.nil
@@ -120,6 +122,7 @@
           "tableplus"
           "twingate"
           "kicad"
+          "bartender"
         ];
       };
 
