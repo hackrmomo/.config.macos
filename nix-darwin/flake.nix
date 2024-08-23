@@ -123,6 +123,8 @@
           "twingate"
           "kicad"
           "bartender"
+          "jetbrains-toolbox"
+          "rider"
         ];
       };
 
