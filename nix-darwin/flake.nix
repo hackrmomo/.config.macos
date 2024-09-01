@@ -24,6 +24,7 @@
           pkgs.kitty-themes
           pkgs.starship
           pkgs.alacritty
+          pkgs.alacritty-theme
           pkgs.lazygit
           pkgs.atuin
           pkgs.screenfetch
@@ -31,6 +32,9 @@
           pkgs.zoxide
           pkgs.fzf
           pkgs.neovim
+          pkgs.fastfetch
+          pkgs.btop
+          pkgs.zsh-autoenv
 
           # apps
           pkgs.vscode
@@ -48,6 +52,7 @@
           pkgs.poetry
           pkgs.python313Full
           pkgs.go
+          pkgs.asdf-vm
 
           # nix stuff
           pkgs.nil
@@ -64,6 +69,12 @@
       # Create /etc/zshrc that loads the nix-darwin environment.
       programs.zsh = {
         enable = true;
+        enableBashCompletion = true;
+        enableCompletion = true;
+        enableFzfCompletion = true;
+        enableFzfGit = true;
+        enableFzfHistory = true;
+        enableSyntaxHighlighting = true;
       };
       # programs.fish.enable = true;
 
@@ -100,11 +111,13 @@
         enable = true;
         brews = [
           "azure-cli" # we install az via brew since az ssh is broken on pkgs.azure-cli
+          "zig"
         ];
 
         masApps = {
           "Hand Mirror" = 1502839586;
           "Amphetamine" = 937984704;
+          "Xcode" = 497799835;
         };
 
         casks = [
