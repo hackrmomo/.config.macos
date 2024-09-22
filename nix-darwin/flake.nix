@@ -37,7 +37,6 @@
           pkgs.zsh-autoenv
 
           # apps
-          pkgs.vscode
           pkgs.raycast
           pkgs.spotify
           pkgs.mos
@@ -138,6 +137,7 @@
           "bartender"
           "jetbrains-toolbox"
           "rider"
+          "visual-studio-code"
         ];
       };
 
