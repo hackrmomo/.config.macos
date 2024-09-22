@@ -35,6 +35,8 @@
           pkgs.fastfetch
           pkgs.btop
           pkgs.zsh-autoenv
+          pkgs.gh
+          pkgs.yazi
 
           # apps
           pkgs.raycast
@@ -45,6 +47,7 @@
           pkgs.teams
           pkgs.obsidian
           pkgs.stats
+          pkgs.fontforge
 
           # dev dependencies
           pkgs.dotnet-sdk_8
@@ -52,6 +55,7 @@
           pkgs.python313Full
           pkgs.go
           pkgs.asdf-vm
+          pkgs.zls
 
           # nix stuff
           pkgs.nil
@@ -110,7 +114,6 @@
         enable = true;
         brews = [
           "azure-cli" # we install az via brew since az ssh is broken on pkgs.azure-cli
-          "zig"
         ];
 
         masApps = {
@@ -138,6 +141,7 @@
           "jetbrains-toolbox"
           "rider"
           "visual-studio-code"
+          "zed"
         ];
       };
 
@@ -145,6 +149,10 @@
         ".GlobalPreferences" = {
           "com.apple.mouse.scaling" = 0.5;
           # "com.apple.mouse.linear" = true; # does not work yet
+        };
+        NSGlobalDomain = {
+          KeyRepeat = 2;
+          InitialKeyRepeat = 15;
         };
 
         finder = {

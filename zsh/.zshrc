@@ -17,6 +17,8 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source ~/.config/zsh/cyberpunk_neon.zsh-theme
+
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.config/zsh/.histfile
@@ -38,6 +40,7 @@ compinit
 
 export PATH="$PATH:/opt/homebrew/bin"
 export PATH="$PATH:/opt/homebrew/sbin"
+export PATH="$PATH:/Users/hackr/.asdf/shims"
 export NVM_DIR="$HOME/.nvm"
 export ZDOTDIR="$HOME/.config/zsh"
 export KEEP_ZSHRC="yes"
@@ -56,6 +59,7 @@ source <(fzf --zsh)
 ###############################################################################
 
 alias rebuild="darwin-rebuild switch --flake ~/.config/nix-darwin"
+alias rebuild-custom="darwin-rebuild switch --flake ~/.config/nix-darwin -I darwin=~/dev/nix-darwin"
 alias pip="python3 -m pip"
 alias g="git"
 alias gc="git commit -m"

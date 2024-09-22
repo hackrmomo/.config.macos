@@ -63,6 +63,10 @@ outer.bottom =     16
 outer.top =        16
 outer.right =      16
 
+[[on-window-detected]]
+if.app-id = 'com.autodesk.fusion360'
+run = ['layout floating']
+
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 # 'main' binding mode must be always presented
