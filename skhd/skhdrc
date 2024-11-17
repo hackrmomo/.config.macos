@@ -1,0 +1,29 @@
+# ghostty
+ctrl - escape : open -a "Ghostty"
+
+# move windows
+ctrl + alt + cmd - left : /opt/homebrew/bin/yabai -m window --swap west
+ctrl + alt + cmd - right : /opt/homebrew/bin/yabai -m window --swap east
+ctrl + alt + cmd - up : /opt/homebrew/bin/yabai -m window --swap north
+ctrl + alt + cmd - down : /opt/homebrew/bin/yabai -m window --swap south
+ctrl + alt + cmd - w : /opt/homebrew/bin/yabai -m window --stack north
+ctrl + alt + cmd - a : /opt/homebrew/bin/yabai -m window --stack west
+ctrl + alt + cmd - s : /opt/homebrew/bin/yabai -m window --stack south
+ctrl + alt + cmd - d : /opt/homebrew/bin/yabai -m window --stack east
+
+
+# focus windows
+ctrl + cmd - left : /opt/homebrew/bin/yabai -m window --focus west
+ctrl + cmd - right : /opt/homebrew/bin/yabai -m window --focus east
+ctrl + cmd - up : /opt/homebrew/bin/yabai -m window --focus north
+ctrl + cmd - down : /opt/homebrew/bin/yabai -m window --focus south
+
+# float windows
+ctrl + alt + cmd - f : /opt/homebrew/bin/yabai -m window --toggle float; /opt/homebrew/bin/yabai -m window --grid 4:4:1:1:2:2
+
+# balance space
+ctrl + alt + cmd - b : /opt/homebrew/bin/yabai -m space --balance
+
+# focus space
+ctrl + cmd + shift - left : /opt/homebrew/bin/yabai -m space --focus prev || /opt/homebrew/bin/yabai -m space --focus last
+ctrl + cmd + shift - right : /opt/homebrew/bin/yabai -m space --focus next || /opt/homebrew/bin/yabai -m space --focus first
