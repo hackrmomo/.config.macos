@@ -177,6 +177,8 @@ keybind = super+physical:eight=goto_tab:8
 keybind = super+physical:nine=goto_tab:9
 keybind = super+physical:zero=last_tab
 
+keybind = global:ctrl+grave_accent=toggle_quick_terminal
+
 window-padding-x = 16
 window-padding-y = 8
 window-padding-balance = false
@@ -211,14 +213,15 @@ copy-on-select = true
 click-repeat-interval = 0
 
 confirm-close-surface = false
-quit-after-last-window-closed = true
+quit-after-last-window-closed = false
 initial-window = true
 shell-integration = detect
 shell-integration-features = cursor,no-sudo,title
 osc-color-report-format = 16-bit
 vt-kam-allowed = false
+custom-shader = "shaders/tft.glsl"
 custom-shader = "shaders/bloom.glsl"
-custom-shader-animation = true
+custom-shader-animation = false
 macos-non-native-fullscreen = false
 macos-titlebar-style = tabs
 macos-option-as-alt = false
