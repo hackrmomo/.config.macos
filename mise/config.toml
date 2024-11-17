@@ -1,0 +1,4 @@
+[tools]
+node = "latest"
+python = "latest"
+zig = "master"
